@@ -203,13 +203,11 @@ for cc in cc_warehouse:
    
     
 
-payload = {
-    "addresses": warehouse
-}
+
 
 import json
 
 with open("warehouse.json", 'w') as file:
-    json.dump(payload, file, indent=4)
+    json.dump(warehouse, file, indent=4)
 
 
