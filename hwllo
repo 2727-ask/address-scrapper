@@ -1,14 +1,14 @@
 #! /bin/bash
 
 VBR="1500k"
-FPS="24"
+FPS="30"
 QUAL="superfast"
 
 YOUTUBE_URL="rtmp://a.rtmp.youtube.com/live2"
 KEY="604c-djmt-f9a8-p9k1-2bta"
 
-VIDEO_SOURCE=""
-AUDIO_SOURCE="/home/ubuntu/Music 5h.mp3"
+VIDEO_SOURCE="video.mp4"
+AUDIO_SOURCE="audio.mp3"
 
 ffmpeg \
     -re -f lavfi -i "movie=filename=$VIDEO_SOURCE:loop=0, setpts=N/(FRAME_RATE*TB)" \
